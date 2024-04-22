@@ -133,7 +133,7 @@ class _DownloadPageState extends State<DownloadPage> {
                   );
                 }
               },
-              child: const Text('Enter'),
+              child: const Text('Save'),
             ),
             TextButton(
               onPressed: () {
