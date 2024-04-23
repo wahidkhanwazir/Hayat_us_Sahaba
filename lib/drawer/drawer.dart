@@ -20,6 +20,8 @@ class _DrawerPageState extends State<DrawerPage> {
   final nowDate = DateFormat('MMMM d, yyyy').format(DateTime.now());
   final nowDay = DateFormat('EEEE').format(DateTime.now());
 
+  final InAppReview inAppReview = InAppReview.instance;
+
   // void _launchReview() async {
   //   const url = 'https://play.google.com/store/games?hl=en&gl=US';
   //   if (await canLaunch(url)) {
@@ -29,7 +31,28 @@ class _DrawerPageState extends State<DrawerPage> {
   //   }
   // }
 
-  final InAppReview inAppReview = InAppReview.instance;
+  void showCenteredSnackBar(BuildContext context, String message) {
+    OverlayEntry overlayEntry = OverlayEntry(
+      builder: (context) => Center(
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 12.0),
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          child: Text(message,
+            style: const TextStyle(color: Colors.white,fontSize: 15),
+          ),
+        ),
+      ),
+    );
+
+    Overlay.of(context).insert(overlayEntry);
+    Future.delayed(const Duration(seconds: 2), () {
+      overlayEntry.remove();
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -56,8 +79,9 @@ class _DrawerPageState extends State<DrawerPage> {
             ),
             Center(
               child: InkWell(
-                onTap: (){
-                  
+                onTap: () {
+                  Navigator.pop(context);
+                  showCenteredSnackBar(context, 'Premium not available yet');
                 },
                 child: Container(
                   height: 43,
