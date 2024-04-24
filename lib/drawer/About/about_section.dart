@@ -1,5 +1,7 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:hayat_e_sahaba/drawer/theme_changer/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -62,10 +64,13 @@ class _AboutSectionState extends State<AboutSection> {
           child: Column(
             children: [
               const SizedBox(height: 10,),
-              const CircleAvatar(
-                backgroundColor: Color(0xffD0FCFF),
-                radius: 50,
-                child: FlutterLogo(size: 80,),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(50),
+                child: CircleAvatar(
+                  backgroundColor: Color(0xffD0FCFF),
+                  radius: 45,
+                  child: Image.asset('assets/icons/app icon.png'),
+                ),
               ),
               const SizedBox(height: 10,),
               const Text('Hayate Sahaba',style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600),),
