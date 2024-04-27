@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hayat_e_sahaba/drawer/About/about_section.dart';
+import 'package:hayat_e_sahaba/drawer/About/about_app.dart';
 import 'package:hayat_e_sahaba/drawer/Settings/settingUi.dart';
 import 'package:hayat_e_sahaba/drawer/theme_changer/theme_provider.dart';
 import 'package:in_app_review/in_app_review.dart';

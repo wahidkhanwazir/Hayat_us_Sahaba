@@ -18,7 +18,6 @@ class _SettingPageState extends State<SettingPage> {
     bool isLightTheme = themeChanger.isLightTheme;
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 40,
         flexibleSpace: Container(
           decoration: BoxDecoration(
             color: const Color(0xffD0FCFF),

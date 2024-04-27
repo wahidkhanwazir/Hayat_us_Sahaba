@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:hayat_e_sahaba/Home/home_page.dart';
@@ -13,6 +14,8 @@ Future<void> main() async {
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await GetStorage.init();
   MobileAds.instance.initialize();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp]);
   loadads();
   runApp(
     const MyApp(),

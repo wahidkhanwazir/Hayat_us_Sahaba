@@ -90,7 +90,6 @@ class _FavouritePageState extends State<FavouritePage> {
     List<Map<String, dynamic>> favourites = (storage.read('favourites') as List?)?.cast<Map<String, dynamic>>() ?? [];
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 40,
         flexibleSpace: Container(
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.only(

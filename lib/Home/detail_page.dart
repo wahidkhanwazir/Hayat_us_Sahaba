@@ -11,8 +11,8 @@ import 'package:hayat_e_sahaba/drawer/theme_changer/theme_provider.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:provider/provider.dart';
-import 'package:share/share.dart';
 import 'package:pdf/widgets.dart' as pw;
+import 'package:share/share.dart';
 
 class DetailPage extends StatefulWidget {
  final String part;
@@ -64,7 +64,14 @@ class _DetailPageState extends State<DetailPage> {
     loadSaveInterstitialAd();
   }
 
-  void _createInterstitialAd() {
+  Future<void> _createInterstitialAd() async {
+    // Check for internet connectivity
+    ConnectivityResult connectivityResult = await Connectivity().checkConnectivity();
+    if (connectivityResult == ConnectivityResult.none) {
+      print('No internet connection. Unable to load ads.');
+      return;
+    }
+
     InterstitialAd.load(
       adUnitId: 'ca-app-pub-3940256099942544/1033173712',
       request: const AdRequest(),
@@ -189,9 +196,7 @@ class _DetailPageState extends State<DetailPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: isLightTheme ? Colors.white : Colors.black,
-        title: Text('Complete Book',
-        style: TextStyle(color: isLightTheme ? Colors.black : Colors.black),),
-        toolbarHeight: 40,
+        //toolbarHeight: 40,
         flexibleSpace: Container(
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.only(
@@ -318,13 +323,22 @@ class _DetailPageState extends State<DetailPage> {
                    child: Image.asset('assets/icons/Share.png',scale: 4.5,
                      color: isLightTheme ? Colors.black : Colors.white,),
                  ),
-                 onTap: (){
-                   Share.share('Hello this is local sharing,,,,,,,,,,,,,,,');
+                 onTap: () async {
+                   final ByteData imageData = await rootBundle.load(currentImageList[page!]);
+                   final Uint8List imageUint8List = imageData.buffer.asUint8List();
+                   final tempDir = await getTemporaryDirectory();
+                   final tempFilePath = '${tempDir.path}/image.png';
+                   final tempFile = File(tempFilePath);
+                   await tempFile.writeAsBytes(imageUint8List);
+
+                   final String text = 'Hayat_e_Sahaba صفحہ نمبر: ${page! + 1}  حصہ: $part';
+                   await Share.shareFiles([tempFilePath], text: text);
+                   setState(() {});
                  },
                ),
             ],
           ),
-          const SizedBox(height: 10,),
+          const SizedBox(height: 1,),
           Expanded(
             child: PageView.builder(
               scrollDirection: Axis.vertical,

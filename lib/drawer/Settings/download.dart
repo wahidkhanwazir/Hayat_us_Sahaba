@@ -167,7 +167,6 @@ class _DownloadPageState extends State<DownloadPage> {
       appBar: AppBar(
         title: Text('Complete Books',
         style: TextStyle(color: isLightTheme ? Colors.black : Colors.black),),
-        toolbarHeight: 40,
         flexibleSpace: Container(
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.only(
