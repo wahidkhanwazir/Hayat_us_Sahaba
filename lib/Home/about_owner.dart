@@ -69,6 +69,7 @@ class _AboutOwnerState extends State<AboutOwner> {
                 opacity: 1,)
           ),
         ),
+        title: Text('مصنف',style: TextStyle(fontSize: 30),),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -79,11 +80,12 @@ class _AboutOwnerState extends State<AboutOwner> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(_authorHeadingList[index].toString(),
-                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,fontFamily: 'MyFont1'),
+                    style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,fontFamily: 'MyFont1',
+                      decoration: TextDecoration.underline,),
                     textAlign: TextAlign.center,
                   ),
                   Text(_authorHeadingDescription[index].toString(),
-                    style: TextStyle(fontSize: 15,fontFamily: 'MyFont1'),
+                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500,fontFamily: 'MyFont1'),
                     textAlign: TextAlign.end,),
                   SizedBox(height: 10,),
                 ],
