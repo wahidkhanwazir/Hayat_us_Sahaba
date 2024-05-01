@@ -343,10 +343,10 @@ class _HomePageState extends State<HomePage> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Image.asset('assets/icons/book.png',scale: height / 125,),
+                                      Image.asset('assets/icons/book.png',scale: 5.3,),
                                       Text('آخری پڑھا ہوا',
                                           style: TextStyle(
-                                              fontSize: width / 12.5,
+                                              fontSize: height / 25.5,
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white)),
                                     ],
@@ -359,12 +359,12 @@ class _HomePageState extends State<HomePage> {
                                     children: [
                                       Text('${storageProvider.getLastPage() + 1} :صفہ نمبر',
                                           style: TextStyle(
-                                              fontSize: width / 16,
+                                              fontSize: height / 30,
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white)),
                                       Text(' حصہ${storageProvider.getLastPart()}',
                                           style: TextStyle(
-                                              fontSize: width / 16,
+                                              fontSize: height / 30,
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white))
                                     ],
@@ -591,7 +591,7 @@ class _HomePageState extends State<HomePage> {
                                  child: Column(
                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                    children: [
-                                     Image.asset('assets/icons/Author.png',scale: width / 60,),
+                                     Image.asset('assets/icons/Author.png',scale: 5.5,),
                                      Text('مصنف',
                                        style: TextStyle(
                                            fontSize: width / 15,
@@ -671,7 +671,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/icons/quran.png',scale: width / 65),
+              Image.asset('assets/icons/quran.png',scale: 5.5),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
