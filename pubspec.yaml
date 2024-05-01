@@ -112,6 +112,9 @@ flutter:
     - family: MyFont1
       fonts:
         - asset: assets/fonts/Jameel Noori Nastaleeq.ttf
+    - family: MyFont2
+      fonts:
+        - asset: assets/fonts/katibeh.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

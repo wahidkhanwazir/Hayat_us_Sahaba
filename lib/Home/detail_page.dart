@@ -285,28 +285,34 @@ class _DetailPageState extends State<DetailPage> {
                                 fontWeight: FontWeight.bold,
                                 color: isLightTheme ? Colors.black : Colors.black),
                             ),
-                            Text(' صفحہ نمبر',
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  color: isLightTheme ? Colors.black : Colors.black),
-                              ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 3.0),
+                              child: Text(' صفحہ نمبر',
+                                style: TextStyle(
+                                    fontFamily: 'MyFont2',
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: isLightTheme ? Colors.black : Colors.black),
+                                ),
+                            ),
                           ],
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 10.0),
+                        padding: const EdgeInsets.only(right: 10.0,top: 3.0),
                         child: Row(
                           children: [
                             Text(part.toString(),
                               style: TextStyle(
-                                  fontSize: 15,
+                                  fontFamily: 'MyFont2',
+                                  fontSize: 17,
                                   fontWeight: FontWeight.bold,
                                   color: isLightTheme ? Colors.black : Colors.black),
                             ),
                             Text('حصہ',
                               style: TextStyle(
-                                  fontSize: 15,
+                                  fontFamily: 'MyFont2',
+                                  fontSize: 17,
                                   fontWeight: FontWeight.bold,
                                   color: isLightTheme ? Colors.black : Colors.black),
                             )

@@ -156,7 +156,8 @@ class _FavouritePageState extends State<FavouritePage> {
                           context: context,
                           builder: (BuildContext context) {
                             return AlertDialog(
-                              title: const Text('صفہ ہٹائیں'),
+                              title: const Text('صفہ ہٹائیں',
+                                style: TextStyle(fontFamily: 'MyFont2',),),
                               content: SizedBox(
                                 height: 250,
                                 child: Column(
@@ -172,7 +173,8 @@ class _FavouritePageState extends State<FavouritePage> {
                                       ),
                                       child: Image.asset(favourites[index]['favImage'],fit: BoxFit.fitHeight,),
                                     ),
-                                    const Text('کیا آپ واقعی اس صفہ کو ہٹانا چاہتے ہیں؟'),
+                                    const Text('کیا آپ واقعی اس صفہ کو ہٹانا چاہتے ہیں؟',
+                                      style: TextStyle(fontFamily: 'MyFont2',),),
                                   ],
                                 ),
                               ),
@@ -191,13 +193,13 @@ class _FavouritePageState extends State<FavouritePage> {
                                       );
                                     });
                                   },
-                                  child: const Text('جی ہاں'),
+                                  child: const Text('جی ہاں',style: TextStyle(fontFamily: 'MyFont2',),),
                                 ),
                                 TextButton(
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
-                                  child: const Text('نہیں'),
+                                  child: const Text('نہیں',style: TextStyle(fontFamily: 'MyFont2',),),
                                 ),
                               ],
                             );
@@ -205,14 +207,14 @@ class _FavouritePageState extends State<FavouritePage> {
                         );
                       },
                       child: const Text('ہٹائیں',
-                        style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black),
+                        style: TextStyle(fontFamily: 'MyFont2',fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black),
                       ),
                     ),
                   ),
                   title: Text(' حصہ: ${favourites[index]['favPart']}',
-                    style: TextStyle(color: isLightTheme ? Colors.black : Colors.black),),
+                    style: TextStyle(fontFamily: 'MyFont2',color: isLightTheme ? Colors.black : Colors.black),),
                   subtitle: Text('${favourites[index]['favPage'] + 1} :صفہ نمبر',
-                    style: TextStyle(color: isLightTheme ? Colors.black : Colors.black),),
+                    style: TextStyle(fontFamily: 'MyFont2',color: isLightTheme ? Colors.black : Colors.black),),
                 ),
               ),
               onTap: (){
@@ -246,10 +248,12 @@ class _FavouritePageState extends State<FavouritePage> {
                         children: [
                           Text('${favourites[index]['favPage'] + 1} :صفہ نمبر',
                             style: TextStyle(
+                                fontFamily: 'MyFont2',
                                 fontWeight: FontWeight.w400,
                                 color: isLightTheme ? Colors.black : Colors.black),),
                           Text(' حصہ: ${favourites[index]['favPart']}',
                             style: TextStyle(
+                                fontFamily: 'MyFont2',
                                 fontWeight: FontWeight.w400,
                                 color: isLightTheme ? Colors.black : Colors.black),
                           ),

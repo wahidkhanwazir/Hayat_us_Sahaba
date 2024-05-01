@@ -69,7 +69,14 @@ class _AboutOwnerState extends State<AboutOwner> {
                 opacity: 1,)
           ),
         ),
-        title: Text('مصنف',style: TextStyle(fontSize: 30),),
+        title: Text('مصنف',
+          style: TextStyle(
+            fontSize: 30,
+            fontFamily: 'MyFont2',
+              color: isLightTheme
+                  ? Colors.black
+                  : Colors.black,
+          ),),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

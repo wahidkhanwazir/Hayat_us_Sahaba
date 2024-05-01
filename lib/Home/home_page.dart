@@ -234,6 +234,7 @@ class _HomePageState extends State<HomePage> {
                                   padding: const EdgeInsets.only(right: 8.0),
                                   child: Text('اسلام علیکم',
                                       style: TextStyle(
+                                          fontFamily: 'MyFont2',
                                           fontSize: height / 30,
                                           fontWeight: FontWeight.bold,
                                           color: isLightTheme ? Colors.black : Colors.black),),
@@ -257,6 +258,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -274,11 +276,15 @@ class _HomePageState extends State<HomePage> {
                                 },
                               ),
                             ),
-                            Text('حَیَاۃُ الصَّحَابَہؓ',
-                              style: TextStyle(
-                                fontSize: height / 30,
-                                fontWeight: FontWeight.bold,
-                                color: isLightTheme ? Colors.black : Colors.black,),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0),
+                              child: Text('حَیَاۃُ الصَّحَابَہؓ',
+                                style: TextStyle(
+                                  fontFamily: 'MyFont2',
+                                  fontSize: height / 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: isLightTheme ? Colors.black : Colors.black,),
+                              ),
                             ),
                             InkWell(
                               child: Padding(
@@ -346,6 +352,7 @@ class _HomePageState extends State<HomePage> {
                                       Image.asset('assets/icons/book.png',scale: 5.3,),
                                       Text('آخری پڑھا ہوا',
                                           style: TextStyle(
+                                              fontFamily: 'MyFont2',
                                               fontSize: height / 25.5,
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white)),
@@ -359,11 +366,13 @@ class _HomePageState extends State<HomePage> {
                                     children: [
                                       Text('${storageProvider.getLastPage() + 1} :صفہ نمبر',
                                           style: TextStyle(
+                                              fontFamily: 'MyFont2',
                                               fontSize: height / 30,
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white)),
                                       Text(' حصہ${storageProvider.getLastPart()}',
                                           style: TextStyle(
+                                              fontFamily: 'MyFont2',
                                               fontSize: height / 30,
                                               fontWeight: FontWeight.bold,
                                               color: Colors.white))
@@ -454,6 +463,7 @@ class _HomePageState extends State<HomePage> {
                                  ),
                                  child: Text('جائیے',
                                    style: TextStyle(
+                                       fontFamily: 'MyFont2',
                                        fontSize: width / 30,
                                        fontWeight: FontWeight.bold,
                                        color: isLightTheme
@@ -482,6 +492,7 @@ class _HomePageState extends State<HomePage> {
                                    fillColor: Colors.white,
                                    hintText: '  :صفحہ نمبر',
                                    hintStyle: TextStyle(
+                                       fontFamily: 'MyFont2',
                                        fontSize: width / 40,
                                        color: isLightTheme ? Colors.grey.shade600 : Colors.grey.shade600),
                                    border: OutlineInputBorder(
@@ -517,6 +528,7 @@ class _HomePageState extends State<HomePage> {
                                                  value: e,
                                                  child: Text(e,
                                                      style: TextStyle(
+                                                         fontFamily: 'MyFont2',
                                                          fontSize: width / 26,
                                                          fontWeight:
                                                          FontWeight.bold,
@@ -529,10 +541,11 @@ class _HomePageState extends State<HomePage> {
                                    ),
                                    if (selectedPart == null)
                                      Positioned(
-                                         left: 15,
-                                         top: 6,
+                                         left: 18,
+                                         top: 10,
                                          child: Text('حصہ',
                                            style: TextStyle(
+                                               fontFamily: 'MyFont2',
                                                fontSize: width / 26,
                                                fontWeight: FontWeight.bold,
                                                color: isLightTheme
@@ -544,7 +557,8 @@ class _HomePageState extends State<HomePage> {
                            SizedBox(width: width / 40),
                            Text('صفحہ پڑ جائیے',
                                style: TextStyle(
-                                   fontSize: width / 25,
+                                   fontFamily: 'MyFont2',
+                                   fontSize: width / 24,
                                    fontWeight: FontWeight.bold,
                                    color: Colors.black)),
                            SizedBox(width: width / 40),
@@ -594,6 +608,7 @@ class _HomePageState extends State<HomePage> {
                                      Image.asset('assets/icons/Author.png',scale: 5.5,),
                                      Text('مصنف',
                                        style: TextStyle(
+                                           fontFamily: 'MyFont2',
                                            fontSize: width / 15,
                                            fontWeight: FontWeight.bold,
                                            color: isLightTheme ? Colors.black : Colors.black),
@@ -677,12 +692,14 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Text(parts[index],
                     style: TextStyle(
+                        fontFamily: 'MyFont2',
                         fontSize: width / 15,
                         fontWeight: FontWeight.bold,
                         color: isLightTheme ? Colors.black : Colors.black),
                   ),
                   Text('حصہ',
                     style: TextStyle(
+                        fontFamily: 'MyFont2',
                         fontSize: width / 15,
                         fontWeight: FontWeight.bold,
                         color: isLightTheme ? Colors.black : Colors.black),
