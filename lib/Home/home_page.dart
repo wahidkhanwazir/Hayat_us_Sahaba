@@ -250,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                       left: width / 45,
                       right: width / 45,
                       child: Container(
-                        height: height / 9.8,
+                        height: height / 10.8,
                         width: width / 1.04,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
