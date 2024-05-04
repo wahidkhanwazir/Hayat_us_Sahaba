@@ -349,7 +349,9 @@ class _HomePageState extends State<HomePage> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Image.asset('assets/icons/book.png',scale: 5.3,),
+                                      SizedBox(
+                                        height: height / 13.5,
+                                          child: Image.asset('assets/icons/book.png',)),
                                       Text('آخری پڑھا ہوا',
                                           style: TextStyle(
                                               fontFamily: 'MyFont2',
@@ -605,7 +607,9 @@ class _HomePageState extends State<HomePage> {
                                  child: Column(
                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                    children: [
-                                     Image.asset('assets/icons/Author.png',scale: 5.5,),
+                                     SizedBox(
+                                         width: width / 6,
+                                         child: Image.asset('assets/icons/Author.png',)),
                                      Text('مصنف',
                                        style: TextStyle(
                                            fontFamily: 'MyFont2',
@@ -686,7 +690,9 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/icons/quran.png',scale: 5.5),
+              SizedBox(
+                  width: width / 6,
+                  child: Image.asset('assets/icons/quran.png')),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -711,10 +717,8 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => DetailPage(
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => DetailPage(
                       part: parts[index],
                       page: page,
                     )));
