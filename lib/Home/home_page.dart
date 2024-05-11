@@ -458,10 +458,10 @@ class _HomePageState extends State<HomePage> {
                                    selectedPart == null;
                                  },
                                  style: ButtonStyle(
-                                   side: MaterialStateProperty.all(const BorderSide(width: 0.5)),
+                                   side: WidgetStateProperty.all(const BorderSide(width: 0.5)),
                                    backgroundColor: isLightTheme
-                                       ? MaterialStateProperty.all(Colors.grey.shade200)
-                                       : MaterialStateProperty.all(Colors.grey.shade200),
+                                       ? WidgetStateProperty.all(Colors.grey.shade200)
+                                       : WidgetStateProperty.all(Colors.grey.shade200),
                                  ),
                                  child: Text('جائیے',
                                    style: TextStyle(
@@ -495,7 +495,7 @@ class _HomePageState extends State<HomePage> {
                                    hintText: '  :صفحہ نمبر',
                                    hintStyle: TextStyle(
                                        fontFamily: 'MyFont2',
-                                       fontSize: width / 40,
+                                       fontSize: width / 35,
                                        color: isLightTheme ? Colors.grey.shade600 : Colors.grey.shade600),
                                    border: OutlineInputBorder(
                                      borderRadius: BorderRadius.circular(20.0),
