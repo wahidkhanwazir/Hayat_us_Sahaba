@@ -6,6 +6,7 @@ import 'package:in_app_review/in_app_review.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:share/share.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 class DrawerPage extends StatefulWidget {
@@ -22,14 +23,16 @@ class _DrawerPageState extends State<DrawerPage> {
 
   final InAppReview inAppReview = InAppReview.instance;
 
-  // void _launchReview() async {
-  //   const url = 'https://play.google.com/store/games?hl=en&gl=US';
-  //   if (await canLaunch(url)) {
-  //     await launch(url);
-  //   } else {
-  //     throw 'Could not launch $url';
-  //   }
-  // }
+
+  void _launchURL() async {
+    final url = Uri.parse('https://privacypolicy09876.blogspot.com/2024/04/privacy-policy.html');
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
 
   void showCenteredSnackBar(BuildContext context, String message) {
     OverlayEntry overlayEntry = OverlayEntry(
@@ -218,9 +221,7 @@ class _DrawerPageState extends State<DrawerPage> {
                   ],
                 ),
               ),
-              onTap: (){
-
-              },
+              onTap: _launchURL,
             ),
             InkWell(
               child: Padding(
